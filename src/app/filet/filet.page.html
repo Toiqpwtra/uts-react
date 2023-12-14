@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button *ngFor="let item of appMenu" [tab]="item.title" [routerLink]="[item.url]">
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </div>
+
+  <div>
+    <ion-card-title>Fillet Ikan</ion-card-title>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="assets/images/3.jpg" />
+      <ion-card-header>
+        <ion-card-title>Ikan Bakar</ion-card-title>
+        <ion-card-subtitle>Rp 40.000</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button id="present-alert">Beli Sekarang</ion-button>
+    </ion-card>
+
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="assets/images/3.jpg" />
+      <ion-card-header>
+        <ion-card-title>Ikan Bakar</ion-card-title>
+        <ion-card-subtitle>Rp 40.000</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button id="present-alert">Beli Sekarang</ion-button>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button *ngFor="let tab of appTabs" [tab]="tab.tab" routerDirection="root" [routerLink]="[tab.url]" lines="none" detail="false" routerLinkActive="selected">
+    <ion-icon [name]="tab.icon"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

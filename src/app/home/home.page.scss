@@ -1,0 +1,20 @@
+.custom {
+    width: 100%;
+  }
+  
+/* Mengubah lebar dan tinggi ion-card */
+/* Mengurangi lebar dan tinggi ion-card */
+.promo-box1 {
+  width: 150px; /* Lebar yang lebih kecil */
+  height: 150px; /* Tinggi yang lebih kecil */
+}
+.promo-box2 {
+  width: 150px; /* Lebar yang lebih kecil */
+  height: 150px; /* Tinggi yang lebih kecil */
+}
+
+/* Mengurangi ukuran gambar di dalam ion-card */
+.promo-image {
+  max-width: 100%;
+  max-height: 100%;
+}

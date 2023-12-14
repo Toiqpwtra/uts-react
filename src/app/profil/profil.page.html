@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" action="" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password" type="password" id="password" required>
+            </div>
+            <button name="login" type="submit">LOGIN</button>
+        </form>
+        <p style="text-decoration: none; color: black;">Belum punya akun? <a href="signup.php" style="text-decoration: none; color: black;">Sign Up</a></p>
+    </div>
+
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button *ngFor="let tab of appTabs" [tab]="tab.tab" routerDirection="root" [routerLink]="[tab.url]" lines="none" detail="false" routerLinkActive="selected">
+    <ion-icon [name]="tab.icon"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

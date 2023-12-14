@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img
+  src="assets/images/hero.png"
+  alt="Deskripsi gambar Anda"
+  class="custom"
+  ></ion-img>
+
+  <div>
+    <br>
+    <ion-title size="large">Menu</ion-title>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button *ngFor="let item of appMenu" [tab]="item.title" [routerLink]="[item.url]">
+          <ion-icon [name]="item.icon"></ion-icon>
+          <ion-label>{{ item.title }}</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+
+    
+  </div>
+<br>
+  <div>
+    <ion-title size="large">Promo Minggu ini</ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <!-- Promo 1 -->
+            <ion-card class="promo-box1">
+              <ion-img [src]="'assets/images/1.jpeg'" alt="Promo 1" class="promo-image"></ion-img>
+              <ion-card-content class="promo-description">
+                <ion-card-title>Promo 1</ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <!-- Promo 2 -->
+            <ion-card class="promo-box2">
+              <ion-img [src]="'assets/images/1.jpeg'" alt="Promo 2" class="promo-image"></ion-img>
+              <ion-card-content class="promo-description">
+                <ion-card-title>Promo 2</ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </div>
+<br>
+  <div>
+    <ion-title size="large">Produk Terlaris</ion-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <!-- Promo 1 -->
+          <ion-card class="promo-box1">
+            <ion-img [src]="'assets/images/1.jpg'" alt="Promo 1" class="promo-image"></ion-img>
+            <ion-card-content class="promo-description">
+              <ion-card-title>Ikan Arwana</ion-card-title>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <!-- Promo 2 -->
+          <ion-card class="promo-box2">
+            <ion-img [src]="'assets/images/2.jpg'" alt="Promo 2" class="promo-image"></ion-img>
+            <ion-card-content class="promo-description">
+              <ion-card-title>Ikan KOI</ion-card-title>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button *ngFor="let tab of appTabs" [tab]="tab.tab" routerDirection="root" [routerLink]="[tab.url]" lines="none" detail="false" routerLinkActive="selected">
+    <ion-icon [name]="tab.icon"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

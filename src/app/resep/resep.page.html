@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <br>
+        <ion-title size="large">Resep</ion-title>
+  </div>
+
+  <div>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="assets/images/3.jpg" />
+      <ion-card-header>
+        <ion-card-title>Ikan Bakar</ion-card-title>
+        <ion-card-subtitle>
+          Berikut resep ikan bakar dalam format yang lebih ringkas:
+
+**Bahan-bahan:**
+- 1 ikan segar (ikan mas, ikan nila, atau jenis lainnya), dibersihkan dan dibelah
+- Bumbu yang dihaluskan: 5-6 cabai merah, 4-5 bawang merah, 3-4 siung bawang putih, 2 cm kunyit, 2 cm jahe, 1 cm lengkuas (opsional)
+- 3-4 siung bawang putih, cincang halus
+- 2-3 batang serai, memarkan
+- 2-3 lembar daun jeruk
+- 1 sendok makan minyak sayur
+- Garam dan gula secukupnya
+- Air jeruk nipis atau air jeruk lemon secukupnya
+- Daun pisang atau aluminium foil untuk membungkus
+
+**Cara membuat:**
+1. Campurkan bumbu yang dihaluskan, bawang putih cincang, serai, daun jeruk, minyak sayur, garam, gula, dan air jeruk nipis dalam wadah. Aduk rata dan jadikan sebagai bumbu marinasi.
+
+2. Marinasi ikan: Lumuri ikan dengan bumbu marinasi. Biarkan ikan marinasi selama minimal 30 menit.
+
+3. Siapkan alat panggang yang sudah dipanaskan (panggangan arang, grill, atau oven).
+
+4. Bungkus ikan dalam daun pisang atau aluminium foil untuk menjaga kelembaban. Panggang ikan selama 15-20 menit atau hingga matang, sesekali balik ikan.
+
+5. Angkat dari panggangan dan sajikan panas. Hias dengan potongan tomat, mentimun, atau daun ketumbar jika diinginkan.
+
+Selamat menikmati!
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button id="present-alert">Read More</ion-button>
+    </ion-card>
+  </div>
+  
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button *ngFor="let tab of appTabs" [tab]="tab.tab" routerDirection="root" [routerLink]="[tab.url]" lines="none" detail="false" routerLinkActive="selected">
+    <ion-icon [name]="tab.icon"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>
